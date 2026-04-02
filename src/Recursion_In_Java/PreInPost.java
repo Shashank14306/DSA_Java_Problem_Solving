@@ -2,7 +2,7 @@ package Recursion_In_Java;
 
 public class PreInPost {
     public static void main(String[] args) {
-        pip(2);
+        pip(4);
     }
     public static void pip(int n){
         if(n==0) return;
