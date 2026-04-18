@@ -1,0 +1,25 @@
+package Arrays_In_Java;
+
+public class FlipToMinimize1s {
+    public static void main(String[] args) {
+        class Solution {
+            public int maxOnes(int[] arr) {
+                int totalOnes = 0;
+                for (int num : arr) {
+                    if (num == 1) totalOnes++;
+                }
+
+                int maxGain = 0, currGain = 0;
+
+                for (int num : arr) {
+                    int val = (num == 0) ? 1 : -1;
+
+                    currGain = Math.max(val, currGain + val);
+                    maxGain = Math.max(maxGain, currGain);
+                }
+
+                return totalOnes + maxGain;
+            }
+        }
+    }
+}
