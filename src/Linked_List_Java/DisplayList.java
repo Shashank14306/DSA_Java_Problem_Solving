@@ -1,7 +1,4 @@
 package Linked_List_Java;
-
-
-
 class node{
     int val;
     Node next;
